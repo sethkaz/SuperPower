@@ -152,38 +152,38 @@ Wire Wire Line
 Wire Wire Line
 	7700 2500 7950 2500
 Connection ~ 7700 2750
-Text HLabel 3700 5900 0    50   Output ~ 0
+Text HLabel 3150 5250 0    50   Output ~ 0
 Thermistor
 $Comp
 L Connector_Generic:Conn_01x02 J4
 U 1 1 5F7ACDE2
-P 4400 5900
-F 0 "J4" H 4480 5892 50  0000 L CNN
-F 1 "DNP" H 4480 5801 50  0000 L CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 4400 5900 50  0001 C CNN
-F 3 "~" H 4400 5900 50  0001 C CNN
-F 4 "DNP" H 4400 5900 50  0001 C CNN "Mfg"
-F 5 "DNP" H 4400 5900 50  0001 C CNN "Mfg PN"
-	1    4400 5900
+P 3850 5250
+F 0 "J4" H 3930 5242 50  0000 L CNN
+F 1 "DNP" H 3930 5151 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 3850 5250 50  0001 C CNN
+F 3 "~" H 3850 5250 50  0001 C CNN
+F 4 "DNP" H 3850 5250 50  0001 C CNN "Mfg"
+F 5 "DNP" H 3850 5250 50  0001 C CNN "Mfg PN"
+	1    3850 5250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4200 5900 3900 5900
+	3650 5250 3350 5250
 $Comp
 L power:GND #PWR015
 U 1 1 5F7AD85C
-P 4100 6400
-F 0 "#PWR015" H 4100 6150 50  0001 C CNN
-F 1 "GND" H 4105 6227 50  0000 C CNN
-F 2 "" H 4100 6400 50  0001 C CNN
-F 3 "" H 4100 6400 50  0001 C CNN
-	1    4100 6400
+P 3550 5750
+F 0 "#PWR015" H 3550 5500 50  0001 C CNN
+F 1 "GND" H 3555 5577 50  0000 C CNN
+F 2 "" H 3550 5750 50  0001 C CNN
+F 3 "" H 3550 5750 50  0001 C CNN
+	1    3550 5750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4100 6400 4100 6250
+	3550 5750 3550 5600
 Wire Wire Line
-	4100 6000 4200 6000
+	3550 5350 3650 5350
 $Comp
 L Device:Q_NMOS_GSD Q?
 U 1 1 5FA86C0C
@@ -205,36 +205,36 @@ Wire Wire Line
 Connection ~ 6100 2400
 Text Notes 5150 4100 0    50   ~ 0
 Reverse Polarity Protection
-Text Notes 3900 7000 0    50   ~ 0
-Thermistor Connection\n(Optional)
+Text Notes 2750 6200 0    100  ~ 0
+Thermistor Connection
 Text Notes 7650 3650 0    50   ~ 0
 Battery Connection
 $Comp
 L Device:R_Small R?
 U 1 1 5FBB505A
-P 3900 6100
+P 3350 5450
 AR Path="/5F6AC481/5FBB505A" Ref="R?"  Part="1" 
 AR Path="/5F6AC644/5FBB505A" Ref="R22"  Part="1" 
-F 0 "R22" H 3841 6054 50  0000 R CNN
-F 1 "DNP" H 3841 6145 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 3900 6100 50  0001 C CNN
-F 3 "~" H 3900 6100 50  0001 C CNN
-F 4 "DNP" H 3900 6100 50  0001 C CNN "Mfg"
-	1    3900 6100
+F 0 "R22" H 3291 5404 50  0000 R CNN
+F 1 "DNP" H 3291 5495 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3350 5450 50  0001 C CNN
+F 3 "~" H 3350 5450 50  0001 C CNN
+F 4 "DNP" H 3350 5450 50  0001 C CNN "Mfg"
+	1    3350 5450
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	3900 6000 3900 5900
-Connection ~ 3900 5900
+	3350 5350 3350 5250
+Connection ~ 3350 5250
 Wire Wire Line
-	3900 5900 3700 5900
+	3350 5250 3150 5250
 Wire Wire Line
-	3900 6250 3900 6200
+	3350 5600 3350 5550
 Wire Wire Line
-	3900 6250 4100 6250
-Connection ~ 4100 6250
+	3350 5600 3550 5600
+Connection ~ 3550 5600
 Wire Wire Line
-	4100 6250 4100 6000
+	3550 5600 3550 5350
 Text Notes 5600 2000 0    50   ~ 0
 SSM3J328R
 $Comp
@@ -271,4 +271,6 @@ Wire Wire Line
 	6100 3450 6100 3550
 Wire Wire Line
 	6100 3100 6100 3250
+Text Notes 2750 6650 0    50   ~ 0
+NOTE:\nA 10k resistor must be added to EITHER R22 or J4.  \nThe battery will not charge without this resistor.
 $EndSCHEMATC

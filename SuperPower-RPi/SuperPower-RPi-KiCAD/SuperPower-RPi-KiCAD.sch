@@ -328,4 +328,6 @@ Wire Wire Line
 	8050 1400 8900 1400
 Text Notes 7150 5600 0    50   ~ 0
 Would be nice:\nUSB output connector to power \n
+Text Notes 1000 1050 0    50   ~ 0
+TODO: \n1. Add footprint for external oscillator for STM32 (DNP).\n2. Correct pinout for LDO (U5).\n3. Move LDO onto it's own sheet.\n4. Consider moving the I2C connector to I2C2 port.
 $EndSCHEMATC
